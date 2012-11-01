@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 
 namespace BufferAPI
 {
+    [JsonObject(MemberSerialization.OptIn)]
     public class BufferSchedules
     {
         [JsonProperty("days")]

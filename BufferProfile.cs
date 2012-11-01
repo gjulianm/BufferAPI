@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 
 namespace BufferAPI
 {
+    [JsonObject(MemberSerialization.OptIn)]
     public class BufferProfile
     {
 
@@ -10,7 +11,18 @@ namespace BufferAPI
         public string AvatarUrl { get; set; }
 
         [JsonProperty("created_at")]
-        public DateTime CreatedAt { get; set; }
+        public long CreatedAtSeconds { get; set; }
+
+
+        public DateTime CreatedAt
+        {
+            get
+            {
+                System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+                dtDateTime = dtDateTime.AddSeconds(CreatedAtSeconds).ToLocalTime();
+                return dtDateTime;
+            }
+        }
 
         [JsonProperty("default")]
         public bool IsDefault { get; set; }
@@ -20,9 +32,6 @@ namespace BufferAPI
 
         [JsonProperty("id")]
         public string Id { get; set; }
-
-        [JsonProperty("schedules")]
-        public BufferSchedules Schedules { get; set; }
 
         [JsonProperty("service")]
         public string Service { get; set; }

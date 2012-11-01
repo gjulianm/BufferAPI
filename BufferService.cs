@@ -17,6 +17,8 @@ namespace BufferAPI
         {
             token = access_token;
 
+            serializer = new JsonSerializer();
+
             client = new RestClient();
             client.Authority = "https://api.bufferapp.com/";
             client.VersionPath = "/1/";
@@ -111,7 +113,7 @@ namespace BufferAPI
             WebParameterCollection param = new WebParameterCollection();
 
             foreach (var id in profile_ids)
-                param.Add("profile_ids[]", id + "&");
+                param.Add("profile_ids[]", id);
 
             param.Add("text", text);
             WithHammock<BufferUpdateCreation>("updates/create.json", WebMethod.Post, param, callback);

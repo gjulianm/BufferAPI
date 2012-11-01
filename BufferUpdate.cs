@@ -4,6 +4,7 @@ using System;
 
 namespace BufferAPI
 {
+    [JsonObject(MemberSerialization.OptIn)]
     public class BufferUpdateCreation
     {
         [JsonProperty("success")]
@@ -19,16 +20,37 @@ namespace BufferAPI
         public IEnumerable<BufferUpdate> Updates { get; set; }
     }
 
+    [JsonObject(MemberSerialization.OptIn)]
     public class BufferUpdate
     {
         [JsonProperty("id")]
         public string Id { get; set; }
 
         [JsonProperty("created_at")]
-        public DateTime CreatedAt { get; set; }
+        public long CreatedAtSeconds { get; set; }
+
+        public DateTime CreatedAt
+        {
+            get
+            {
+                System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+                dtDateTime = dtDateTime.AddSeconds(CreatedAtSeconds).ToLocalTime();
+                return dtDateTime;
+            }
+        }
 
         [JsonProperty("due_at")]
-        public DateTime DueAt { get; set; }
+        public long DueAtSeconds { get; set; }
+
+        public DateTime DueAt
+        {
+            get
+            {
+                System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+                dtDateTime = dtDateTime.AddSeconds(DueAtSeconds).ToLocalTime();
+                return dtDateTime;
+            }
+        }
 
         [JsonProperty("profile_id")]
         public string ProfileId { get; set; }

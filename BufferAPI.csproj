@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6B5DC164-21D7-49AE-87D1-D8D19FFE10C1}</ProjectGuid>
+    <ProjectGuid>{4186D1D2-C419-4DA2-A1D8-5F56E5AAA30D}</ProjectGuid>
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -41,6 +41,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json.WindowsPhone">
+      <HintPath>..\hammock\lib\Newtonsoft.Json.WindowsPhone.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows" />
     <Reference Include="system" />
     <Reference Include="System.Core" />
@@ -49,8 +52,22 @@
     <Reference Include="mscorlib.extensions" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="BufferProfile.cs" />
+    <Compile Include="BufferResponse.cs" />
+    <Compile Include="BufferSchedule.cs" />
+    <Compile Include="BufferService.cs" />
+    <Compile Include="BufferUpdate.cs" />
+    <Compile Include="BufferUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\hammock\src\net40\Hammock.WindowsPhone\Hammock.WindowsPhone.csproj">
+      <Project>{3059FD1C-4B4B-4460-A0D4-53C84CCE6CAC}</Project>
+      <Name>Hammock.WindowsPhone</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.CSharp.targets" />

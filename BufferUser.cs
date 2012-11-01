@@ -12,16 +12,37 @@ using Newtonsoft.Json;
 
 namespace BufferAPI
 {
+    [JsonObject(MemberSerialization.OptIn)]
     public class BufferUser
     {
         [JsonProperty("id")]
         public int Id { get; set; }
 
         [JsonProperty("activity_at")]
-        public DateTime LastActivity { get; set; }
+        public long LastActivitySeconds { get; set; }
+
+        public DateTime LastActivity
+        {
+            get
+            {
+                System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+                dtDateTime = dtDateTime.AddSeconds(LastActivitySeconds).ToLocalTime();
+                return dtDateTime;
+            }
+        }
 
         [JsonProperty("created_at")]
-        public DateTime CreatedAt { get; set; }
+        public long CreatedAtSeconds { get; set; }
+
+        public DateTime CreatedAt
+        {
+            get
+            {
+                System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+                dtDateTime = dtDateTime.AddSeconds(CreatedAtSeconds).ToLocalTime();
+                return dtDateTime;
+            }
+        }
 
         [JsonProperty("plan")]
         public string Plan { get; set; }
