@@ -9,8 +9,8 @@
     <ProjectTypeGuids>{C089C8C0-30E0-4E22-80C0-CE093F111A43};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BufferAPI</RootNamespace>
-    <AssemblyName>BufferAPI</AssemblyName>
+    <RootNamespace>Ocell.Buffer</RootNamespace>
+    <AssemblyName>Ocell.Buffer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
     <TargetFrameworkProfile>WindowsPhone71</TargetFrameworkProfile>
@@ -75,9 +75,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\hammock\src\net40\Hammock.WindowsPhone\Hammock.WindowsPhone.csproj">
-      <Project>{3059FD1C-4B4B-4460-A0D4-53C84CCE6CAC}</Project>
-      <Name>Hammock.WindowsPhone</Name>
+    <ProjectReference Include="..\..\Ocell.ThirdParty\hammock\src\net40\Hammock.WindowsPhone.Mango\Hammock.WindowsPhone.Mango.csproj">
+      <Project>{CD029D13-5037-43A6-8CD9-5F12B00A7DE0}</Project>
+      <Name>Hammock.WindowsPhone.Mango</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />
