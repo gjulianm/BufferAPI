@@ -1,5 +1,5 @@
-﻿using System;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using System;
 
 namespace BufferAPI
 {
@@ -37,7 +37,7 @@ namespace BufferAPI
         public string Service { get; set; }
 
         [JsonProperty("service_id")]
-        public long ServiceId { get; set; }
+        public string ServiceId { get; set; }
 
         [JsonProperty("service_username")]
         public string ServiceUsername { get; set; }
