@@ -27,7 +27,7 @@ namespace BufferAPI
             PersistentUrlParameters.Add("access_token", token);
         }
         
-        private T Deserialize<T>(string content)
+        protected override T Deserialize<T>(string content)
         {
             return JsonConvert.DeserializeObject<T>(content);
         }
@@ -43,9 +43,16 @@ namespace BufferAPI
             return await CreateAndExecute<IEnumerable<BufferProfile>>("profiles.json", HttpMethod.Get);
         }
 
-        public async Task<HttpResponse<BufferProfile>> GetProfile(string id, Action<BufferProfile, BufferResponse> callback)
+        public async Task<HttpResponse<BufferProfile>> GetProfile(string id)
         {
-            return await CreateAndExecute<BufferProfile>("profiles.json", HttpMethod.Get, "id", id);
+            var response = await CreateAndExecute<IEnumerable<BufferProfile>>("profiles.json", HttpMethod.Get, "id", id);
+
+            BufferProfile profile = null;
+
+            if (response.Content != null && response.Content.Any())
+                profile = response.Content.First();
+
+            return new HttpResponse<BufferProfile>(profile, response);
         }
 
         public async Task<HttpResponse<BufferUpdateCreation>> PostUpdate(string text, IEnumerable<string> profile_ids)

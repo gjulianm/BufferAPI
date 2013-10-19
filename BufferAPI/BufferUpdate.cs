@@ -14,7 +14,7 @@ namespace BufferAPI
         public int Count { get; set; }
 
         [JsonProperty("buffer_percentage")]
-        public int Percentage { get; set; }
+        public double Percentage { get; set; }
 
         [JsonProperty("updates")]
         public IEnumerable<BufferUpdate> Updates { get; set; }

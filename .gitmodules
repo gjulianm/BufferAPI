@@ -1,3 +1,3 @@
 [submodule "AncoraMVVM"]
 	path = AncoraMVVM
-	url = ./AncoraMVVM
+	url = git@github.com:gjulianm/AncoraMVVM.git

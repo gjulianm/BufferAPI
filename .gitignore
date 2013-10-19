@@ -113,3 +113,4 @@ Resources/*
 
 # Private data.
 SensitiveData.cs
+BufferAPI.Tests/TokenData.cs
