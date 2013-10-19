@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BufferAPI", "BufferAPI\BufferAPI.csproj", "{4186D1D2-C419-4DA2-A1D8-5F56E5AAA30D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BufferAPI.Tests", "BufferAPI.Tests\BufferAPI.Tests.csproj", "{635DAEC9-B8D8-438F-AB3B-052E8BEDBB3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4186D1D2-C419-4DA2-A1D8-5F56E5AAA30D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4186D1D2-C419-4DA2-A1D8-5F56E5AAA30D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4186D1D2-C419-4DA2-A1D8-5F56E5AAA30D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4186D1D2-C419-4DA2-A1D8-5F56E5AAA30D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{635DAEC9-B8D8-438F-AB3B-052E8BEDBB3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{635DAEC9-B8D8-438F-AB3B-052E8BEDBB3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{635DAEC9-B8D8-438F-AB3B-052E8BEDBB3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{635DAEC9-B8D8-438F-AB3B-052E8BEDBB3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

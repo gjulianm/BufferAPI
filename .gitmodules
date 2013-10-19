@@ -1,0 +1,3 @@
+[submodule "AncoraMVVM"]
+	path = AncoraMVVM
+	url = ./AncoraMVVM
