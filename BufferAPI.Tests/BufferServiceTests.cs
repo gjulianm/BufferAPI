@@ -44,7 +44,9 @@ namespace BufferAPI.Tests
         [TestMethod]
         public async Task PostUpdate()
         {
-            await TestEndpoint(() => Service.PostUpdate("Test update", new List<string> { PrivateData.TestProfileId }));
+            var msnow = (DateTime.Now - DateTime.MinValue).TotalMilliseconds;
+
+            await TestEndpoint(() => Service.PostUpdate("Test update " + msnow.ToString(), new List<string> { PrivateData.TestProfileId }));
         }
     }
 }
