@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>http://www.mozilla.org/MPL</licenseUrl>
+    <projectUrl>https://github.com/gjulianm/BufferAPI</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>$description$</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Mozilla Public License 2013</copyright>
+    <tags>Buffer</tags>
+  </metadata>
+</package>

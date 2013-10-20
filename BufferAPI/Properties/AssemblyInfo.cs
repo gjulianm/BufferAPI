@@ -7,11 +7,11 @@ using System.Resources;
 // conjunto de atributos. Cambie los valores de estos atributos para modificar la información
 // asociada a un ensamblado.
 [assembly: AssemblyTitle("BufferAPI")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A simple API to connect to Buffer (http://bufferapp.com)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Guillermo Julián")]
 [assembly: AssemblyProduct("BufferAPI")]
-[assembly: AssemblyCopyright("Copyright ©  2012")]
+[assembly: AssemblyCopyright("MPL 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -24,6 +24,7 @@ using System.Resources;
 //
 // Puede especificar todos los valores o usar los valores predeterminados de número de compilación y revisión 
 // mediante el carácter '*', como se muestra a continuación:
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("0.1.0.0")]
+[assembly: AssemblyFileVersion("0.1.0.0")]
 [assembly: NeutralResourcesLanguageAttribute("es-ES")]
+[assembly: AssemblyInformationalVersion("0.1.0-alpha")]

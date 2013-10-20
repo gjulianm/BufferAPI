@@ -8,8 +8,8 @@
     <ProjectGuid>{4186D1D2-C419-4DA2-A1D8-5F56E5AAA30D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ocell.Buffer</RootNamespace>
-    <AssemblyName>Ocell.Buffer</AssemblyName>
+    <RootNamespace>BufferAPI</RootNamespace>
+    <AssemblyName>BufferAPI</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Profile158</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
