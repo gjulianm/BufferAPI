@@ -1,8 +1,12 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace BufferAPI
 {
+    /// <summary>
+    /// This class represents a Buffer account and its details.
+    /// <see href="https://buffer.com/developers/api/user" />
+    /// </summary>
     [JsonObject(MemberSerialization.OptIn)]
     public class BufferUser
     {

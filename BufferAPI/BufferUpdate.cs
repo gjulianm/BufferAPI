@@ -1,9 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
-using System;
 
 namespace BufferAPI
 {
+    /// <summary>
+    /// This class represents the result of the creation of a Buffer update.
+    /// <see href="https://buffer.com/developers/api/updates#updatescreate" />
+    /// </summary>
     [JsonObject(MemberSerialization.OptIn)]
     public class BufferUpdateCreation
     {
@@ -20,6 +24,10 @@ namespace BufferAPI
         public IEnumerable<BufferUpdate> Updates { get; set; }
     }
 
+    /// <summary>
+    /// This class represents a created Buffer update.
+    /// <see href="https://buffer.com/developers/api/updates#updatesid" />
+    /// </summary>
     [JsonObject(MemberSerialization.OptIn)]
     public class BufferUpdate
     {
