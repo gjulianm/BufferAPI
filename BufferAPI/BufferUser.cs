@@ -1,8 +1,12 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
+using Newtonsoft.Json;
 
 namespace BufferAPI
 {
+    /// <summary>
+    /// This class represents a Buffer account and its details.
+    /// <see href="https://buffer.com/developers/api/user" />
+    /// </summary>
     [JsonObject(MemberSerialization.OptIn)]
     public class BufferUser
     {
@@ -16,7 +20,7 @@ namespace BufferAPI
         {
             get
             {
-                System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+                DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
                 dtDateTime = dtDateTime.AddSeconds(LastActivitySeconds).ToLocalTime();
                 return dtDateTime;
             }
@@ -29,7 +33,7 @@ namespace BufferAPI
         {
             get
             {
-                System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
+                DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0);
                 dtDateTime = dtDateTime.AddSeconds(CreatedAtSeconds).ToLocalTime();
                 return dtDateTime;
             }
