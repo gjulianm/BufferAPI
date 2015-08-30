@@ -19,3 +19,27 @@ in the Package Manager console.
 ### Building errors: how to fix
 
 It may be possible that, when including this pacakge, you start to see weird errors regarding unresolved references. Try installing the NuGet package _Microsoft.Bcl.Build_ to try and resolve them.
+
+## Usage example
+
+To use the Buffer API, you should instatiate the _BufferService_ class with the access token retrieved from Buffer. Then you can use its methods to push updates to Buffer:
+
+
+```csharp
+var token = GetAccessToken();
+var service = new BufferService(token);
+var profileResult = service.GetProfiles();
+
+if(!profileResult.Succeeded)
+{
+	var errorMessage = String.Format("Request not suceeded. Error code {0}, inner exception {1}, response {2}", profileResult.StatusCode, profileResult.InnerException, profileResult.StringContents);
+	throw new Exception(errorMessage);
+}
+
+var allProfiles = profileResult.Content;
+var twitterProfiles = allProfiles.Where(x => x.Service == "twitter");
+
+var response = service.PostUpdate("Hello from BufferAPI", twitterProfiles);
+
+// Check response in the same fashion as profileResult above.
+```
