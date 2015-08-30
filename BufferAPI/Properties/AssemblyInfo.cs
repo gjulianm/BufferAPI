@@ -25,4 +25,4 @@ using System.Resources;
 [assembly: AssemblyVersion("1.0.0.0")]
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: NeutralResourcesLanguageAttribute("es-ES")]
-[assembly: AssemblyInformationalVersion("1.0.0-alpha")]
+[assembly: AssemblyInformationalVersion("1.0.0")]
