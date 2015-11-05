@@ -91,22 +91,22 @@ namespace BufferAPI
     [JsonObject(MemberSerialization.OptIn)]
     public class BufferUpdateMedia
     {
-        [JsonProperty("link")]
+        //[JsonProperty("link")]
         public string Link { get; set; }
 
-        [JsonProperty("description")]
+        //[JsonProperty("description")]
         public string Description { get; set; }
 
-        [JsonProperty("title")]
+       // [JsonProperty("title")]
         public string Title { get; set; }
 
-        [JsonProperty("picture")]
+        //[JsonProperty("picture")]
         public string Picture { get; set; }
 
-        [JsonProperty("photo")]
+        //[JsonProperty("photo")]
         public string Photo { get; set; }
 
-        [JsonProperty("thumbnail")]
+        //[JsonProperty("thumbnail")]
         public string Thumbnail { get; set; }
 
     }
@@ -118,10 +118,10 @@ namespace BufferAPI
     [JsonObject(MemberSerialization.OptIn)]
     public class BufferUpdateRetweet
     {
-        [JsonProperty("tweet_id")]
+        //[JsonProperty("tweet_id")]
         public string TweetId { get; set; }
 
-        [JsonProperty("comment")]
+        //[JsonProperty("comment")]
         public string Comment { get; set; }
 
     }
