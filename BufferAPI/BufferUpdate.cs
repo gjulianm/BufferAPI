@@ -81,4 +81,107 @@ namespace BufferAPI
         [JsonProperty("via")]
         public string Via { get; set; }
     }
+
+
+
+    /// <summary>
+    /// This class represents the media section of a new update to send to buffer
+    ///  <see href="https://buffer.com/developers/api/updates#updatescreate" />
+    /// </summary>
+    [JsonObject(MemberSerialization.OptIn)]
+    public class BufferUpdateMedia
+    {
+        [JsonProperty("link")]
+        public string Link { get; set; }
+
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
+        [JsonProperty("title")]
+        public string Title { get; set; }
+
+        [JsonProperty("picture")]
+        public string Picture { get; set; }
+
+        [JsonProperty("photo")]
+        public string Photo { get; set; }
+
+        [JsonProperty("thumbnail")]
+        public string Thumbnail { get; set; }
+
+    }
+
+    /// <summary>
+    /// This class represents the retweet section of a new update to send to buffer
+    ///  <see href="https://buffer.com/developers/api/updates#updatescreate" />
+    /// </summary>
+    [JsonObject(MemberSerialization.OptIn)]
+    public class BufferUpdateRetweet
+    {
+        [JsonProperty("tweet_id")]
+        public string TweetId { get; set; }
+
+        [JsonProperty("comment")]
+        public string Comment { get; set; }
+
+    }
+
+
+
+
+    /// <summary>
+    /// This class represents a new update to send to buffer
+    ///  <see href="https://buffer.com/developers/api/updates#updatescreate" />
+    /// </summary>
+    [JsonObject(MemberSerialization.OptIn)]
+    public class BufferUpdateCreate
+    {
+        public BufferUpdateCreate()
+        {
+            Media = new BufferUpdateMedia();
+            Retweet = new BufferUpdateRetweet();
+
+            Shorten = true;
+            Attachment = true;
+        }
+
+
+        //   [JsonProperty("text")]
+        public string Text { get; set; }
+
+        //   [JsonProperty("shorten")]
+        public bool Shorten { get; set; }
+
+        //   [JsonProperty("now")]
+        public bool Now { get; set; }
+
+        //   [JsonProperty("top")]
+        public bool Top { get; set; }
+
+        //   [JsonProperty("media")]
+        public BufferUpdateMedia Media { get; set; }
+
+        //   [JsonProperty("attachment")]
+        public bool Attachment { get; set; }
+
+
+        public DateTime ScheduledAt { get; set; }
+
+        //    [JsonProperty("scheduled_at")]
+        public double ScheduledAtSeconds
+        {
+            get
+            {
+                return BufferAPI.TimeConversion.DateTimeToUnixTimestamp(ScheduledAt);
+            }
+        }
+
+        //   [JsonProperty("retweet")]
+        public BufferUpdateRetweet Retweet { get; set; }
+
+
+    }
+
+
+
 }
